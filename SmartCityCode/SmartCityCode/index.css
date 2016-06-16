@@ -1,0 +1,172 @@
+body{
+	background-image:linear-gradient(#F5F5DC, #ffffff);
+	background-repeat: repeat-x;
+	text-align: center;
+}
+
+div.main{
+    position:relative;
+    width:100%;
+    text-align: center;
+    height:390px;
+}
+div.main img{
+	opacity: 0.4;
+	position: top center;
+	max-width: 100%;
+    height: auto;
+;
+}
+
+@media all and (min-width: 700px) {
+div.mobile{
+    display:none;
+}
+div.desktop{
+    display:block;
+    
+}
+}
+div.slogan{
+    position: relative;
+    z-index: 10;
+    background-color:rgba(0,0,0,0.5);
+    color:white;
+    font-size:18px;
+    line-height: 30px;
+    
+   
+    width:calc(100% - 10px);
+    height:73px;
+    padding-top:0px;
+    padding-left:15px;
+    text-align: center;
+    font-weight: bold;
+	max-width: 100%;
+    height: auto;
+}
+
+div.logo{
+	font-size:90px;
+	letter-spacing: 5px;
+    position: relative;
+	z-index:20;
+	text-align: center;
+	top: 10px;
+	padding-bottom: 10px;
+	
+}
+
+
+div.bottom_buttons{
+    position:relative;
+    
+    width:100%;
+    
+    height:100px;
+    text-align: center;
+}
+
+div.bottom_buttons div{
+    position:relative;
+    display:inline-block;
+}
+
+div.login_button{
+    border-radius: 8px;
+    border:2px solid green;
+    color:rgb(0,176,238);
+    text-align: center;
+    padding:10px;
+    margin:10px;
+    background-image:linear-gradient(#F5F5DC, #ffffff);
+}
+
+div.login_button:hover{
+    background-color:rgb(245,245,245);
+    cursor:pointer;
+}
+
+div.header{
+    position:fixed;
+    top:0px;
+    left:0px;
+    background-image:linear-gradient(#F5F5DC, #ffffff);
+    border-bottom: 1px solid lightgray;
+    width:100%;
+    height:40px;
+    text-align: center;
+    line-height: 40px;
+    color:rgb(0,176,238); 
+    font-size:20px;
+    z-index:200;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family:ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+div.header img{
+    position:absolute;
+    top:10px;
+    right:10px;
+    height:15px;
+    width:15px;
+}
+
+div.header img:hover{
+    cursor:pointer;
+}
+
+
+
+div.menu{
+    position:fixed;
+    top:0px;
+    right:0px;
+    width:180px;
+    height:100%;
+    background-color:white;
+    border-left:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    z-index:250;
+    display:none;
+}
+
+div.menu div.menu_item, div.menu div.close{
+    position:relative;
+    float:left;
+    width:calc(100% - 20px);
+    padding:10px 0px 0px 20px;
+    color:black;
+    font-size:19px;
+    height:30px;
+}
+
+div.menu div.menu_item:hover{
+    background-color:rgb(245,245,245);
+    cursor: pointer;
+}
+
+div.menu div.close{
+    padding-bottom:0px;
+}
+
+div.menu div.close img{
+    position:absolute;
+    top:10px;
+    right:10px;
+    height:20px;
+    width:20px;
+}
+
+div.menu div.close img:hover{
+    cursor:pointer;
+}
+
+div.main_form{
+    position:absolute;
+    top:40px;
+    left:0px;
+    width:100%;
+	
+}

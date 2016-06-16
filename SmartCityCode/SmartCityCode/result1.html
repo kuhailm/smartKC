@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<title>SmartKC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css">
+<script src="smartKC.js"></script>
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter{
+cursor: pointer;
+}
+</style>
+<body class="w3-pale-green">
+
+<!-- Top container -->
+<div class="w3-container w3-top w3-large w3-padding w3-black" style="z-index:4">
+  <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open();"><i class="fa fa-bars"></i> Menu</button>
+  <span class="w3-right">SmartKC</span>
+</div>
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="avatar.png" class="w3-circle w3-margin-right" style="width:46px">
+    </div>
+    <div class="w3-col s8">
+      <span>Welcome, <strong>Mike</strong></span><br>
+      <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>Dashboard</h5>
+  </div>
+  <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>Close Menu</a>
+  <a href="result1.html" class="w3-padding w3-blue"><i class="fa fa-users fa-fw"></i> Overview</a>
+  <a href="profile.html" class="w3-padding"><i class="fa fa-user"></i>       Profile</a>
+  <a href="Trip.html" class="w3-padding"><i class="fa fa-bicycle fa-fw"></i> Take a trip</a>
+  <a href="rankings.html" class="w3-padding "><i class="fa fa-bar-chart fa-fw"></i> Ranking</a>
+  <a href="#" class="w3-padding"><i class="fa fa-exclamation-triangle fa-fw"></i> Report a problem</a>
+
+</nav>
+
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+	<h4 class="w3-container w3-black w3-border" style="text-align:center"><b>Overview</h4></b>
+    <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+  </header>
+
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container w3-green w3-padding-16" onclick="takeTrip()">
+        <div class="w3-left"><i class="fa fa-bicycle w3-xxxlarge"></i></div>
+        <div class="w3-clear"></div>
+        <h4>Take a trip</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-blue w3-padding-16" onclick="rankings()">
+        <div class="w3-left"><i class="fa fa-bar-chart w3-xxxlarge"></i></div>        
+        <div class="w3-clear"></div>
+        <h4>Rankings</h4>
+      </div>
+    </div>
+    <div class="w3-quarter" >
+      <div class="w3-container w3-teal w3-padding-16" onclick="profile()">
+        <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+        
+        <div class="w3-clear"></div>
+        <h4>Profile</h4>
+      </div>
+    </div>
+    <div class="w3-quarter" cursor="pointer">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16" onclick="friends()" >
+        <div class="w3-left"><i class="fa fa-users w3-xxxlarge" ></i></div>
+        
+        <div class="w3-clear"></div>
+        <h4>Friends</h4>
+      </div>
+    </div>
+  </div>
+  
+  <hr>
+  
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+  <footer class="w3-container w3-padding-16 w3-pale-green w3-center">
+    
+    <p>Powered by <a href="http://www2.newpaltz.edu/~delimamg1/SmartCity/" target="_blank">SmartKC</a></p>
+  </footer>
+
+
+  
+
+<script>
+// Script to open and close sidenav
+	function w3_open() {
+		document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+		document.getElementsByClassName("w3-overlay")[0].style.display = "block";
+	}
+	 
+	function w3_close() {
+		document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+		document.getElementsByClassName("w3-overlay")[0].style.display = "none";
+	}
+	function takeTrip() {
+		window.location.href = "Trip.html";
+	}
+	function rankings(){
+	window.location.href = "rankings.html"
+	}
+	function friends(){
+	window.location.href = "friends.html"
+	}
+	function profile(){
+	window.location.href = "profile.html"
+	}
+	
+	
+</script>
+
+</body>
+</html>

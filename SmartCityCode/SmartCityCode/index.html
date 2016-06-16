@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<title>SmartKC - hello!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<style>
+		html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+		.w3-quarter, .w3-third{
+		cursor: pointer;
+		}
+	</style>
+<body class="w3-pale-green">
+
+	<!-- Top container -->
+	<div class="w3-container w3-top w3-large w3-padding w3-black" style="z-index:4">
+	  <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open();"><i class="fa fa-bars"></i> Menu</button>
+	  <span class="w3-right">SmartKC</span>
+	</div>
+
+	<!-- Sidenav/menu -->
+	<nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"><br>
+	  <div class="w3-container w3-row">
+		<div class="w3-col s4">
+		  <img src="avatar.png" class="w3-circle w3-margin-right" style="width:46px">
+		</div>
+		<div class="w3-col s8">
+		  <span>Welcome, <strong>Mike</strong></span><br>
+		  <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
+		  <a href="#" class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
+		  <a href="#" class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
+		</div>
+	  </div>
+	  <hr>
+	  <div class="w3-container">
+		<h5>Dashboard</h5>
+	  </div>
+	  <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>Close Menu</a>
+	  <a href="#" class="w3-padding w3-blue"><i class="fa fa-users fa-fw"></i> Overview</a>
+	  <a href="#" class="w3-padding"><i class="fa fa-bicycle fa-fw"></i> Take a trip</a>
+	  <a href="#" class="w3-padding"><i class="fa fa-bar-chart fa-fw"></i> Ranking</a>
+	  <a href="#" class="w3-padding"><i class="fa fa-at fa-fw"></i> Contact Us</a>
+
+	</nav>
+
+
+	<!-- Overlay effect when opening sidenav on small screens -->
+	<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu"></div>
+
+	 <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+	<header class="w3-container" style="padding-top:22px">
+		<h4 class="w3-container w3-black w3-border" style="text-align:center"><b>Welcome!</h4></b>
+		
+	</header>
+	<div class="w3-container w3-center">
+		<h2>Smart KC</h2>
+		<h3>Help your city, Help yourself</h3>
+		<div class="w3-container">
+			<button onclick="document.getElementById('login').style.display='block'" class="w3-btn w3-green w3-large w3-center">Login</button>
+			<button onclick="document.getElementById('signup').style.display='block'" class="w3-btn w3-green w3-large w3-center">Signup</button>
+		</div>
+	</div>
+	<div id="login" class="w3-modal">
+	  <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+	  
+		<div class="w3-center"><br>
+		  <span onclick="document.getElementById('login').style.display='none'" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close Modal">×</span>
+		  <img src="avatar.png" alt="Avatar" style="width:30%" class="w3-margin-top">
+		</div>
+
+		<div class="w3-container" action="#">
+		  <div class="w3-section">
+			<label><b>Username</b></label>
+			<input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
+
+			<label><b>Password</b></label>
+			<input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
+
+			<button class="w3-btn-block w3-green w3-section w3-padding" type="submit" onclick="takeLogin()">Login</button>
+			<input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+		  </div>
+		</div>
+
+		<div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+		  <button onclick="document.getElementById('login').style.display='none'" type="button" class="w3-btn w3-red">Cancel</button>
+		  <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+		</div>
+
+	  </div>
+	</div>
+	<!---------------------------->
+	<div id="signup" class="w3-modal">
+		<div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+			<div class="w3-center"><br>
+				<span onclick="document.getElementById('signup').style.display='none'" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close Modal">×</span>
+				<img src="avatar.png" alt="Avatar" style="width:30%" class="w3-margin-top">
+			</div>
+			<div class="w3-container" action="#">
+				<div class="w3-section">
+					<label><b>ACCOUNT</b></label>
+					<input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Email" name="email" required>
+					<input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Enter Password" name="password" required>
+					
+					<label><b>PROFILE</label></b>
+					<input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Name" name="name" required>
+					<input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Email" name="email" required>
+					
+					
+					
+					
+
+					<input class="w3-check" type="checkbox" id="agree" required><label> I agree to the terms of service</label>
+					<button class="w3-btn-block w3-green w3-section w3-padding" type="button" onclick="isChecked()">Create Account</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// Script to open and close sidenav
+		function w3_open() {
+			document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+			document.getElementsByClassName("w3-overlay")[0].style.display = "block";
+		}
+		 
+		function w3_close() {
+			document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+			document.getElementsByClassName("w3-overlay")[0].style.display = "none";
+		}
+		function takeLogin() {
+			window.location.href = "result1.html";
+		}
+		function isChecked() {
+		
+			
+			if(document.getElementById("agree").checked == true){
+				takeLogin();
+			} 
+			else{
+				alert("You must agree to terms of services");
+			}
+			
+		}
+	</script>          
+</body>
+</html> 
